@@ -25,7 +25,19 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCyq91j_rQ5gEFShsxOz_CzG5L5cYTCr68",
+    authDomain: "mgt-db.firebaseapp.com",
+    databaseURL: "https://mgt-db.firebaseio.com",
+    projectId: "mgt-db",
+    storageBucket: "mgt-db.appspot.com",
+    messagingSenderId: "728781340778"
+  };
+  firebase.initializeApp(config);
+</script>
 </head>
 <body class="bg-dark">
 
@@ -41,37 +53,37 @@
                     <form>
                         <div class="form-group">
                             <label>Primer Nombre</label>
-                            <input type="email" class="form-control" placeholder="Primer Nombre">
+                            <input type="text" id="name1_inpt" class="form-control" placeholder="Primer Nombre">
                         </div>
 
                         <div class="form-group">
                             <label>Segundo Nombre</label>
-                            <input type="email" class="form-control" placeholder="Segundo Nombre">
+                            <input type="text" id="name2_inpt" class="form-control" placeholder="Segundo Nombre">
                         </div>
 
                         <div class="form-group">
                             <label>Primer Apellido</label>
-                            <input type="email" class="form-control" placeholder="Primer Apellido">
+                            <input type="text" id="ape1_inpt" class="form-control" placeholder="Primer Apellido">
                         </div>
 
                         <div class="form-group">
                             <label>Segundo Apellido</label>
-                            <input type="email" class="form-control" placeholder="Segundo Apellido">
+                            <input type="text" id="ape2_inpt" class="form-control" placeholder="Segundo Apellido">
                         </div>
 
                         <div class="form-group">
                             <label>Direccion</label>
-                            <input type="email" class="form-control" placeholder="Direccion">
+                            <input type="text" id="address_inpt" class="form-control" placeholder="Direccion">
                         </div>
 
                         <div class="form-group">
                             <label>Email address</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" id="email_inpt" class="form-control" placeholder="Email">
                         </div>
 
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" id="pass_inpt" class="form-control" placeholder="Password">
                         </div>
 
                         <div class="checkbox">
@@ -80,7 +92,7 @@
                             </label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+                        <button type="button" onCLick="Regist_click()" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
 
                         <div class="register-link m-t-15 text-center">
                             <p>Already have account ? <a href="#"> Sign in</a></p>
@@ -97,7 +109,7 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script src="script/Regist_Script.js"></script>
 
 </body>
 </html>
