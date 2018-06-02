@@ -31,6 +31,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     window.alert("error instancia de usuario");
     location = 'page-login.html';
   }
-})	;
+});
 
 }
