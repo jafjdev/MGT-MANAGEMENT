@@ -4,7 +4,8 @@ var pass=document.getElementById("pass_inpt").value
 var boole =0;
 const promise = firebase.auth().signInWithEmailAndPassword(email, pass)
 	.then(user => {
-        location = 'index.html' //Url aqui
+		firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+        location = 'proyectos-compañia.html' //Url aqui
     }).catch(error => {
         window.alert(error);
     });

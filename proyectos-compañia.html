@@ -26,7 +26,19 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCyq91j_rQ5gEFShsxOz_CzG5L5cYTCr68",
+    authDomain: "mgt-db.firebaseapp.com",
+    databaseURL: "https://mgt-db.firebaseio.com",
+    projectId: "mgt-db",
+    storageBucket: "mgt-db.appspot.com",
+    messagingSenderId: "728781340778"
+  };
+  firebase.initializeApp(config);
+</script>
 </head>
 <body>
 
@@ -206,73 +218,9 @@
             </div>
         </div>
 
-           <div class="col-sm-6 col-lg-5">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Proyecto X</span>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-            <!--/.col-->
-
-           <div class="col-sm-6 col-lg-5">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Proyecto 2X</span>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-                       <div class="col-sm-6 col-lg-5">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span>Proyecto 2X</span>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-
-
+        <div id="proyectos">
+        </div>
+        <script type="text/javascript"src="script/Proy-Comp_Script.js"></script>
     <!-- Right Panel -->
 
     <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>

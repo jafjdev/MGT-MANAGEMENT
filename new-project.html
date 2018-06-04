@@ -35,6 +35,19 @@
                     <link rel="stylesheet" href="assets/css/lib/chosen/chosen.min.css">
                     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
                     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+                    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+                    <script>
+  // Initialize Firebase
+                    var config = {
+    apiKey: "AIzaSyCyq91j_rQ5gEFShsxOz_CzG5L5cYTCr68",
+    authDomain: "mgt-db.firebaseapp.com",
+    databaseURL: "https://mgt-db.firebaseio.com",
+    projectId: "mgt-db",
+    storageBucket: "mgt-db.appspot.com",
+    messagingSenderId: "728781340778"
+  };
+  firebase.initializeApp(config);
+</script>
                 </head>
                 <body>
                     <!-- Left Panel -->
@@ -252,11 +265,11 @@
                                         <div class="card-body card-block">
                                             <div class="form-group">
                                                 <label for="company" class=" form-control-label">Proyecto</label>
-                                                <input type="text" id="company" placeholder="Nombre del Proyecto" class="form-control">
+                                                <input type="text" id="name_proy" placeholder="Nombre del Proyecto" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label for="vat" class=" form-control-label">Descripcion</label>
-                                                <input type="text" id="vat" placeholder="Descripcion del proyecto" class="form-control">
+                                                <input type="text" id="descrip_proy" placeholder="Descripcion del proyecto" class="form-control">
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
@@ -293,7 +306,7 @@
                                                 </div>
                                             </div>
                                             <div class="float-right">
-                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                <button type="button" onClick="new_proy()" class="btn btn-primary btn-sm">
                                                     <i class="fa fa-dot-circle-o"></i> Submit
 
                                                     
@@ -395,6 +408,7 @@
                                 <script src="assets/js/main.js"></script>
                                 <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
                                 <script type="text/javascript" src="script/Check_Script.js"></script>
+                                <script type="text/javascript" src="script/New-Proyect_Script.js"></script>
                                 <script>
                                     jQuery(document).ready(function() {
                                         jQuery(".standardSelect").chosen({
