@@ -1,33 +1,33 @@
 var div = document.getElementById("proyectos");
 var dbref= firebase.database();
 var proyref = dbref.ref('Project');
-var id;
-var i;
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-   id=user.uid; 
-  } else {
-    // No user is signed in.
-  }
-});
+//captura parametros
+	var paramstr = window.location.search.substr(1);
+	var paramarr = paramstr.split ("&");
+	var params = {};
 
+	for ( var i = 0; i < paramarr.length; i++) {
+ 	   var tmparr = paramarr[i].split("=");
+   	 params[tmparr[0]] = tmparr[1];
+	}
+
+var id=params['id'];
+console.log(id);
+var proy;
 proyref.orderByValue() .on("value", function(data) {
    	data.forEach(function(data) {
+   		proy=data.key;
    		data.forEach(function(data) {
-   				console.log(data.key);
    				if(data.key=="uid_creador"){
    					console.log(data.val());
+   					console.log(id);
    					if(data.val()==id)
    					{
-   						i=1;
+   					div.innerHTML += proyectos(proy);  	
    					}
    				}
    		
    		});
-   		if(i==1)
-   		{
- 	  	div.innerHTML += proyectos(data.key);  	
-		}
    	});
  });
 
