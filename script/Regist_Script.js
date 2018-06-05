@@ -20,7 +20,7 @@ firebase.auth().createUserWithEmailAndPassword(email,pass)
 			addres:addres,
 			uid:id
 			}).then(user => {
-        		location = 'proyectos-compañia.html' //Url aqui
+        		location = 'proyectos-compania.html' //Url aqui
     		}).catch(error => {
         		window.alert(error);
     		});

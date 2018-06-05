@@ -4346,9 +4346,7 @@ tbody.collapse.show {
 }
 
 .card-body {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  display:flex;
   padding: 1.25rem;
 }
 
