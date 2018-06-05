@@ -22,3 +22,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 })	;
 		
 }
+function logout(){
+    firebase.auth().signOut().then(function() {
+       location = 'index.html'
+    }).catch(function(error) {
+      // An error happened.
+    });
+}

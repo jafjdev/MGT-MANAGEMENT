@@ -1,10 +1,13 @@
+
 var div = document.getElementById("proyectos");
 var dbref= firebase.database();
 var proyref = dbref.ref('Project');
 //captura parametros
+
 	var paramstr = window.location.search.substr(1);
 	var paramarr = paramstr.split ("&");
 	var params = {};
+
 
 	for ( var i = 0; i < paramarr.length; i++) {
  	   var tmparr = paramarr[i].split("=");
@@ -12,15 +15,12 @@ var proyref = dbref.ref('Project');
 	}
 
 var id=params['id'];
-console.log(id);
 var proy;
 proyref.orderByValue() .on("value", function(data) {
    	data.forEach(function(data) {
    		proy=data.key;
    		data.forEach(function(data) {
    				if(data.key=="uid_creador"){
-   					console.log(data.val());
-   					console.log(id);
    					if(data.val()==id)
    					{
    					div.innerHTML += proyectos(proy);  	
@@ -56,4 +56,11 @@ html +=' <div class="col-sm-6 col-lg-5">';
 	html += '</div>';
 html += '</div>';
 return html;
+}
+function logout(){
+    firebase.auth().signOut().then(function() {
+       location = 'index.html'
+    }).catch(function(error) {
+      // An error happened.
+    });
 }

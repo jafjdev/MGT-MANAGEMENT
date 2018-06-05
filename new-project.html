@@ -26,7 +26,19 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCyq91j_rQ5gEFShsxOz_CzG5L5cYTCr68",
+    authDomain: "mgt-db.firebaseapp.com",
+    databaseURL: "https://mgt-db.firebaseio.com",
+    projectId: "mgt-db",
+    storageBucket: "mgt-db.appspot.com",
+    messagingSenderId: "728781340778"
+  };
+  firebase.initializeApp(config);
+</script>
 </head>
 <body>
         <!-- Left Panel -->
@@ -215,7 +227,7 @@
 
                                 <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
 
-                                <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
+                                <a class="nav-link" onCLick="logout()" href="#"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>
                 </div>
@@ -303,7 +315,7 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
-
+    <script src="script/New-Proyect_Script.js"></script>
     <script>
         jQuery(document).ready(function() {
             jQuery(".standardSelect").chosen({
