@@ -1,15 +1,8 @@
 var div = document.getElementById("proyectos");
 var dbref= firebase.database();
 var proyref = dbref.ref('Project');
-var id;
+var id=firebase.auth().currentUser.uid;s;
 var i;
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-   id=user.uid; 
-  } else {
-    // No user is signed in.
-  }
-});
 
 proyref.orderByValue() .on("value", function(data) {
    	data.forEach(function(data) {
