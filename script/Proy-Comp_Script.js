@@ -46,7 +46,7 @@ html +=' <div class="col-sm-6 col-lg-5">';
 					html += '</button>';
 					html += '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">';
 						html += '<div class="dropdown-menu-content">';
-							html += '<a class="dropdown-item" href="#">Action</a>';
+							html += '<a class="dropdown-item" href="proyecto-concreto.html">Detalles</a>';
 							html += '<a class="dropdown-item" href="#">Another action</a>';
 							html += '<a class="dropdown-item" href="#">Something else here</a>';
 						html += '</div>';
@@ -70,6 +70,5 @@ function logout(){
 
 
 function newproyhref(){
-	window.alert("ntro");
 location='new-project.html?id='+id;
 }

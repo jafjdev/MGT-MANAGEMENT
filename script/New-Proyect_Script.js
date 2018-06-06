@@ -19,11 +19,16 @@ function new_proy(){
 				descripción: descrip,
 				estatus:"Activo",
 				uid_creador:id
-	}).catch(function(error){
+	}
+	).catch(function(error){
 	var errorCode = error.code;
 	var errorMessage = error.message;
 	window.alert(errorMessage);
-
+	redirec();
 	});
-			location="proyectos-compania.html?=id"+id;
+			
+}
+
+function redirec(){
+	location='proyectos-compania.html';
 }
