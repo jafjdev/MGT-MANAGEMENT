@@ -6,6 +6,15 @@ var name2=document.getElementById("name2_inpt").value;
 var ape=document.getElementById("ape1_inpt").value;
 var ape2 = document.getElementById("ape2_inpt").value;
 var addres = document.getElementById("address_inpt").value;
+var rolname;
+if(document.getElementById("address_check").checked==true)
+{
+	rolname="admin";
+}
+else
+{
+	rolname="developer";
+}
 firebase.auth().createUserWithEmailAndPassword(email,pass)
 	.then(function(){
 		firebase.auth().signInWithEmailAndPassword(email,pass)
@@ -18,9 +27,17 @@ firebase.auth().createUserWithEmailAndPassword(email,pass)
 			lastName:ape,
 			lastName2:ape2,
 			addres:addres,
+			rol:rolname,
 			uid:id
 			}).then(user => {
-        		location = 'proyectos-compania.html' //Url aqui
+				if(rolname=="developer"){
+					window.alert("entro");
+        			location = 'proyectos-compania.html?id='+firebase.auth().currentUser.uid; //Url aqui
+        		}
+        		else if(rolname=="admin"){
+        			location = 'dashboard.html?id='+firebase.auth().currentUser.uid; //Url aqui
+        		}
+        		
     		}).catch(error => {
         		window.alert(error);
     		});

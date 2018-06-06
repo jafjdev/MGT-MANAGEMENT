@@ -1,7 +1,7 @@
-
 var div = document.getElementById("proyectos");
 var dbref= firebase.database();
 var proyref = dbref.ref('Project');
+
 //captura parametros
 
 	var paramstr = window.location.search.substr(1);
@@ -15,6 +15,9 @@ var proyref = dbref.ref('Project');
 	}
 
 var id=params['id'];
+
+
+
 var proy;
 proyref.orderByValue() .on("value", function(data) {
    	data.forEach(function(data) {
@@ -63,4 +66,10 @@ function logout(){
     }).catch(function(error) {
       // An error happened.
     });
+}
+
+
+function newproyhref(){
+	window.alert("ntro");
+location='new-project.html?id='+id;
 }
