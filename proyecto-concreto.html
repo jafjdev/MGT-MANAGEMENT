@@ -563,7 +563,7 @@
                                                             <th scope="row">3</th>
                                                         </tr>
                                                         <tr>
-                                                            <th><button type="button" class="btn btn-primary btn-sm pull-right"><i class="fa fa-plus-circle"></i>&nbsp; Agregar</button></th>
+                                                            <th><button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#agregarAC"><i class="fa fa-plus-circle"></i>&nbsp; Agregar</button></th>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -614,7 +614,7 @@
                                                             <th scope="row">3</th>
                                                         </tr>
                                                         <tr>
-                                                            <th><button type="button" class="btn btn-primary btn-sm pull-right"><i class="fa fa-plus-circle"></i>&nbsp; Agregar</button></th>
+                                                            <th><button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#agregarAC"><i class="fa fa-plus-circle"></i>&nbsp; Agregar</button></th>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -631,33 +631,62 @@
             <!-- .content -->
         </div>
         <div class="modal fade" id="agregarBM" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="mediumModalLabel">Agregar Item Backlog</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-<div class="row form-group">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mediumModalLabel">Agregar Item Backlog</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row form-group">
                             <div class="col col-md-3"><label for="selectLg" class=" form-control-label">Descripcion</label></div>
                             <div class="col-12 col-md-9">
                               <select name="selectLg" id="selectLg" class="form-control-lg form-control">
                                 <option value="0">Opcion #1</option>
                                 <option value="1">Opcion #2</option>
                                 <option value="2">Opcion #3</option>
-                              </select>
-                            </div>
-                          </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary">Confirm</button>
-                            </div>
+                            </select>
                         </div>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="agregarAC" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mediumModalLabel">Agregar Actividad/h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="selectLg" class=" form-control-label">Descripcion</label></div>
+                            <div class="col-12 col-md-9">
+                              <select name="selectLg" id="selectLg" class="form-control-lg form-control">
+                                <option value="0">Opcion #1</option>
+                                <option value="1">Opcion #2</option>
+                                <option value="2">Opcion #3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
         <!-- /#right-panel -->
         <!-- Right Panel -->
         <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
