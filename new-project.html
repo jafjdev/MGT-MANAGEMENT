@@ -59,8 +59,12 @@
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                                     <i class="fa fa-bars"></i>
                                 </button>
-                                <a class="navbar-brand" href="./">MGT Projects</a>
-                                <a class="navbar-brand hidden" href="./">MGT Projects</a>
+                                <a class="navbar-brand" href="./">
+                                    MGT
+                                </a>
+                                <a class="navbar-brand hidden" href="./">
+                                    MGT
+                                </a>
                             </div>
                             <div id="main-menu" class="main-menu collapse navbar-collapse">
                                 <ul class="nav navbar-nav">
@@ -69,40 +73,66 @@
                                             <i class="menu-icon fa fa-dashboard"></i>Dashboard 
 
 
-                                            
+
+
+
+
 
 
                                         </a>
                                         <a href="new-company.html">
-                                            <i class="menu-icon"></i> Nueva Compañia
+                                            <i class="menu-icon fa fa-plus-circle"></i> Nueva Compañia
 
 
-                                            
 
 
-                                        </a>
-                                        <a href="page-register.html">
-                                            <i class="menu-icon"></i> Nuevo Usuario
 
 
-                                            
 
 
                                         </a>
                                         <a href="new-project.html">
-                                            <i class="menu-icon"></i> Nuevo Proyecto
+                                            <i class="menu-icon fa fa-plus-circle"></i> Nuevo Proyecto
+                                        
 
 
-                                            
+
+
+
+
+
+
+                                        </a>
+                                        <a href="backlog.html">
+                                            <i class="menu-icon fa fa-bars"></i> Backlog
+                                        
+
+
+
+
+
+
+
+
+                                        </a>
+                                        <a href="actividades.html">
+                                            <i class="menu-icon fa fa-bars"></i>Actividades
+                                        
+
+
+
+
+
+
 
 
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <!-- /.navbar-collapse -->
-                        </nav>
-                    </aside>
+                        <!-- /.navbar-collapse -->
+                    </nav>
+    </aside>
                     <!-- /#left-panel -->
                     <!-- Left Panel -->
                     <!-- Right Panel -->
@@ -273,7 +303,6 @@
                     </div>
                     <div class="content mt-3">
                         <div class="animated fadeIn">
-                            <div class="row">
                                 <div class="col-xs-6 col-sm-6">
                                     <div class="card">
                                         <div class="card-header">
@@ -323,7 +352,24 @@
                                                 <i class="fa fa-dot-circle-o"></i> Submit
                                             </button>
                                     </div>
-
+                                </div>
+                            <div class="col-xs-6 col-sm-6 width = 400">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong class="card-title">Agregar Usuarios al Proyecto</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <select data-placeholder="Agregar Usuarios..." multiple class="standardSelect">
+                                            <option value=""></option>
+                                                                <option value="User">Veronica Hevia</option>
+                                                                <option value="User">Ramiro Vargas</option>
+                                                                <option value="User">Kevin Martinez</option>
+                                                                <option value="User">Manuel Espinoza</option>
+                                                                <option value="User">Alexander Ruiz</option>
+                                                                <option value="User">Marco Lozano</option>
+                                                                <option value="User">Braulio Picon</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-6" id="divScrum" class="divScrum">
@@ -347,10 +393,14 @@
                                                 </div>
                                                 <div class="col-12 col-md-9">
                                                     <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                                        <option value="0">Please select</option>
-                                                        <option value="1">Jose Cedeno</option>
-                                                        <option value="2">Veronica Hevia</option>
-                                                        <option value="3">Ramiro Vargas</option>
+                                                        <option value=""></option>
+                                                                <option value="User">Veronica Hevia</option>
+                                                                <option value="User">Ramiro Vargas</option>
+                                                                <option value="User">Kevin Martinez</option>
+                                                                <option value="User">Manuel Espinoza</option>
+                                                                <option value="User">Alexander Ruiz</option>
+                                                                <option value="User">Marco Lozano</option>
+                                                                <option value="User">Braulio Picon</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -396,27 +446,7 @@
                                 </div>
                                 <!-- .content -->
                             </div>
-                            <div class="col-xs-6 col-sm-6 width = 400">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <strong class="card-title">Agregar Usuarios al Proyecto</strong>
-                                    </div>
-                                    <div class="card-body">
-                                        <select data-placeholder="Agregar Usuarios..." multiple class="standardSelect">
-                                            <option value=""></option>
-                                            <option value="User">User</option>
-                                            <option value="User">User</option>
-                                            <option value="User">User</option>
-                                            <option value="User">User</option>
-                                            <option value="User">User</option>
-                                            <option value="User">User</option>
-                                            <option value="User">User</option>
-                                            <option value="User">User</option>
-                                            <option value="User">User</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
+                        
                             <div class="col-xs-6 col-sm-6" id="divPrince" class="divPrince">
                                 <div class="card">
                                     <div class="card-header">
@@ -439,15 +469,13 @@
                                                 <div class="col-xs-6 col-sm-6">
                                                     <select data-placeholder="Agregar Usuarios..." multiple class="standardSelect">
                                                         <option value=""></option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
+                                                        <option value="User">Veronica Hevia</option>
+                                                        <option value="User">Ramiro Vargas</option>
+                                                        <option value="User">Kevin Martinez</option>
+                                                        <option value="User">Manuel Espinoza</option>
+                                                        <option value="User">Alexander Ruiz</option>
+                                                        <option value="User">Marco Lozano</option>
+                                                        <option value="User">Braulio Picon</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -458,15 +486,13 @@
                                                 <div class="col-xs-6 col-sm-6">
                                                     <select data-placeholder="Agregar Usuarios..." multiple class="standardSelect">
                                                         <option value=""></option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
-                                                        <option value="User">User</option>
+                                                        <option value="User">Veronica Hevia</option>
+                                                        <option value="User">Ramiro Vargas</option>
+                                                        <option value="User">Kevin Martinez</option>
+                                                        <option value="User">Manuel Espinoza</option>
+                                                        <option value="User">Alexander Ruiz</option>
+                                                        <option value="User">Marco Lozano</option>
+                                                        <option value="User">Braulio Picon</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -494,10 +520,14 @@
                                                         </div>
                                                         <div class="col-12 col-md-9">
                                                             <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                                                <option value="0">Please select</option>
-                                                                <option value="1">Jose Cedeno</option>
-                                                                <option value="2">Veronica Hevia</option>
-                                                                <option value="3">Ramiro Vargas</option>
+                                                                <option value="Please Select"></option>
+                                                                <option value="User">Veronica Hevia</option>
+                                                                <option value="User">Ramiro Vargas</option>
+                                                                <option value="User">Kevin Martinez</option>
+                                                                <option value="User">Manuel Espinoza</option>
+                                                                <option value="User">Alexander Ruiz</option>
+                                                                <option value="User">Marco Lozano</option>
+                                                                <option value="User">Braulio Picon</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -507,10 +537,14 @@
                                                         </div>
                                                         <div class="col-12 col-md-9">
                                                             <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                                                <option value="0">Please select</option>
-                                                                <option value="1">Jose Cedeno</option>
-                                                                <option value="2">Veronica Hevia</option>
-                                                                <option value="3">Ramiro Vargas</option>
+                                                                <option value="">Please Select</option>
+                                                                <option value="User">Veronica Hevia</option>
+                                                                <option value="User">Ramiro Vargas</option>
+                                                                <option value="User">Kevin Martinez</option>
+                                                                <option value="User">Manuel Espinoza</option>
+                                                                <option value="User">Alexander Ruiz</option>
+                                                                <option value="User">Marco Lozano</option>
+                                                                <option value="User">Braulio Picon</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -520,10 +554,14 @@
                                                         </div>
                                                         <div class="col-12 col-md-9">
                                                             <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                                                <option value="0">Please select</option>
-                                                                <option value="1">Jose Cedeno</option>
-                                                                <option value="2">Veronica Hevia</option>
-                                                                <option value="3">Ramiro Vargas</option>
+                                                                <option value="">Please Select</option>
+                                                                <option value="User">Veronica Hevia</option>
+                                                                <option value="User">Ramiro Vargas</option>
+                                                                <option value="User">Kevin Martinez</option>
+                                                                <option value="User">Manuel Espinoza</option>
+                                                                <option value="User">Alexander Ruiz</option>
+                                                                <option value="User">Marco Lozano</option>
+                                                                <option value="User">Braulio Picon</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -533,10 +571,14 @@
                                                         </div>
                                                         <div class="col-12 col-md-9">
                                                             <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                                                <option value="0">Please select</option>
-                                                                <option value="1">Jose Cedeno</option>
-                                                                <option value="2">Veronica Hevia</option>
-                                                                <option value="3">Ramiro Vargas</option>
+                                                                <option value="">Please Select</option>
+                                                                <option value="User">Veronica Hevia</option>
+                                                                <option value="User">Ramiro Vargas</option>
+                                                                <option value="User">Kevin Martinez</option>
+                                                                <option value="User">Manuel Espinoza</option>
+                                                                <option value="User">Alexander Ruiz</option>
+                                                                <option value="User">Marco Lozano</option>
+                                                                <option value="User">Braulio Picon</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -546,10 +588,14 @@
                                                         </div>
                                                         <div class="col-12 col-md-9">
                                                             <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                                                <option value="0">Please select</option>
-                                                                <option value="1">Jose Cedeno</option>
-                                                                <option value="2">Veronica Hevia</option>
-                                                                <option value="3">Ramiro Vargas</option>
+                                                                <option value="">Please Select</option>
+                                                                <option value="User">Veronica Hevia</option>
+                                                                <option value="User">Ramiro Vargas</option>
+                                                                <option value="User">Kevin Martinez</option>
+                                                                <option value="User">Manuel Espinoza</option>
+                                                                <option value="User">Alexander Ruiz</option>
+                                                                <option value="User">Marco Lozano</option>
+                                                                <option value="User">Braulio Picon</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -559,10 +605,14 @@
                                                         </div>
                                                         <div class="col-12 col-md-9">
                                                             <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                                                <option value="0">Please select</option>
-                                                                <option value="1">Jose Cedeno</option>
-                                                                <option value="2">Veronica Hevia</option>
-                                                                <option value="3">Ramiro Vargas</option>
+                                                                <option value="">Please Select</option>
+                                                                <option value="User">Veronica Hevia</option>
+                                                                <option value="User">Ramiro Vargas</option>
+                                                                <option value="User">Kevin Martinez</option>
+                                                                <option value="User">Manuel Espinoza</option>
+                                                                <option value="User">Alexander Ruiz</option>
+                                                                <option value="User">Marco Lozano</option>
+                                                                <option value="User">Braulio Picon</option>
                                                             </select>
                                                         </div>
                                                     </div>
